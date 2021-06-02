@@ -31,6 +31,7 @@ class ListContacts extends Component{
 			showingContacts = this.props.contacts.filter((contact) => match.test(contact.name))
 		}else{
 			showingContacts = contacts
+			//console.log(contacts)
 		}
 		
 		showingContacts.sort(sortBy('name'))
