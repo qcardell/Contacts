@@ -75,7 +75,11 @@ class App extends Component {
 		//		contacts: state.contacts.concat([contact])
 		//	}))
 		//})
-		console.log(contact)
+		//console.log(contact.avatarURL)
+		if(contact.avatarURL === undefined){
+			contact.avatarURL = "none";
+		}
+		//console.log(contact.avatarURL)
 		this.setState((state) => ({
 			contacts: state.contacts.concat([contact]) 
 		}))
@@ -85,7 +89,6 @@ class App extends Component {
 		tempcontact = this.state.contacts;
 		tempcontact.sort(sortBy('id')).reverse();
 		let maxid = Number(tempcontact[0].id) + 1;
-
 		//let id = Number(this.props.name[0].id) + 1;
 	return (
 		<div className="app">

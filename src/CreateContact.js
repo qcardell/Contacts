@@ -14,7 +14,7 @@ class CreateContact extends Component {
 	render(){
 		//this.props.name.sort(sortBy('id')).reverse();
 		//let id = Number(this.props.name[0].id) + 1;
-		console.log(this.props.id)
+		//console.log(this.props.id)
 		return(
 		<div>
 			<Link className="close-create-contact" to="/">Close</Link>
@@ -22,10 +22,11 @@ class CreateContact extends Component {
 				<ImageInput
 					className="create-contact-avatar-input"
 					name="avatarURL"
+					values = "none"
 					maxHeight={64}
 				/>
 				<div className="create-contact-details">
-					<input type ="number"  name="id" defaultValue={this.props.id} placeholder="id" readOnly={true}/>
+					<input type ="number"  style={{display: 'none'}} name="id" defaultValue={this.props.id} placeholder="id" readOnly={true}/>
 					<input type="text" name="name" placeholder="Name"/>
 					<input type="text" name="email" placeholder="Email"/>
 					<button>Add Contact</button>
