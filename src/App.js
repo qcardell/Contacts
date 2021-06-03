@@ -65,7 +65,7 @@ class App extends Component {
 		this.setState((state) => ({
 			contacts: state.contacts.filter((c) => c.id !== contact.id)
 		}))
-		console.log(contact)
+		//console.log(contact)
 		//ContactsAPI.remove(contact)
 	}
 	
